@@ -4,7 +4,10 @@
 
 Провести тестирование разработанных программных модулей с использованием средств автоматизации Microsoft Visual Studio методом «белого ящика».
 
----
+## Стек технологий
+Язык: C# 
+Платформа: .NET Core / .NET Framework 
+Среда разработки: Microsoft Visual Studio 
 
 ## Структура проекта
 
@@ -24,9 +27,12 @@ Bank.sln
 
 ### 1. Запуск консольного приложения
 
+<img width="679" height="103" alt="{EFF95D8D-BB05-4728-BF83-392699486604}" src="https://github.com/user-attachments/assets/1def513e-93d5-4251-83ae-843986c82723" />
+
 ### 2. Результат тестов
 
-*(вставить скриншот зелёных тестов)*
+<img width="943" height="357" alt="{9925CEFE-37B5-403C-A1F6-EFE9B22BED75}" src="https://github.com/user-attachments/assets/cb8d1144-4257-4e78-ba53-08d6e3b47702" />
+
 
 ---
 
@@ -54,7 +60,6 @@ m_balance -= amount;
 | `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` | ✅ Пройден |
 | `Credit_WithValidAmount_UpdatesBalance` | ✅ Пройден |
 | `Credit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` | ✅ Пройден |
-| `Credit_WithZeroAmount_BalanceUnchanged` | ✅ Пройден |
 
 ---
 
