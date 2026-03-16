@@ -48,19 +48,6 @@ m_balance += amount;
 // Стало (исправление):
 m_balance -= amount;
 ```
-
----
-
-## Результаты тестирования
-
-| Тест | Результат |
-|------|-----------|
-| `Debit_WithValidAmount_UpdatesBalance` | ✅ Пройден |
-| `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` | ✅ Пройден |
-| `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` | ✅ Пройден |
-| `Credit_WithValidAmount_UpdatesBalance` | ✅ Пройден |
-| `Credit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` | ✅ Пройден |
-
 ---
 
 ## Вывод
