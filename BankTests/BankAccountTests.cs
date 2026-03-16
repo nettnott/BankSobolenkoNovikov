@@ -17,7 +17,6 @@ namespace BankTests
             double expected = 7.44;
             BankAccount account = new BankAccount("Mr. Roman Abramovich", beginningBalance);
 
-
             account.Debit(debitAmount);
 
             double actual = account.Balance;
@@ -87,6 +86,20 @@ namespace BankTests
             }
 
             Assert.Fail("The expected exception was not thrown.");
+        }
+
+        [TestMethod]
+        public void Credit_WithValidAmount_UpdatesBalance()
+        {
+            double beginningBalance = 11.99;
+            double creditAmount = 5.77;
+            double expected = 17.76;
+            BankAccount account = new BankAccount("Mr. Roman Abramovich", beginningBalance);
+
+            account.Credit(creditAmount);
+
+            double actual = account.Balance;
+            Assert.AreEqual(expected, actual, 0.001, "Account not credited correctly");
         }
     }
 }
