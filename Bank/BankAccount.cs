@@ -8,9 +8,8 @@ namespace BankAccountNS
     public class BankAccount
     {
         private readonly string m_customerName = null!;
-
         private double m_balance;
-
+        
         /// <summary>
         /// Сообщение об ошибке: сумма списания превышает баланс.
         /// </summary>
@@ -20,7 +19,7 @@ namespace BankAccountNS
         /// Сообщение об ошибке: сумма списания меньше нуля.
         /// </summary>
         public const string DebitAmountLessThanZeroMessage = "Debit amount is less than zero";
-
+        
         private BankAccount() { }
 
         /// <summary>

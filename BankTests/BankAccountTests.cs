@@ -6,9 +6,7 @@ namespace BankTests
     [TestClass]
     public class BankAccountTests
     {
-        // -------------------------------------------------------
         // Тесты метода Debit
-        // -------------------------------------------------------
 
         [TestMethod]
         public void Debit_WithValidAmount_UpdatesBalance()
