@@ -19,7 +19,12 @@ namespace BankAccountNS
         /// Сообщение об ошибке: сумма списания меньше нуля.
         /// </summary>
         public const string DebitAmountLessThanZeroMessage = "Debit amount is less than zero";
-        
+
+        /// <summary>
+        /// Сообщение об ошибке: сумма начисления меньше нуля.
+        /// </summary>
+        public const string CreditAmountLessThanZeroMessage = "Credit amount is less than zero";
+
         private BankAccount() { }
 
         /// <summary>
@@ -85,7 +90,7 @@ namespace BankAccountNS
         {
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new System.ArgumentOutOfRangeException("amount", amount, CreditAmountLessThanZeroMessage);
             }
 
             m_balance += amount;

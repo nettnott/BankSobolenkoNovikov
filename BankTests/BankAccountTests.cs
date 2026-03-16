@@ -65,5 +65,28 @@ namespace BankTests
 
             Assert.Fail("The expected exception was not thrown.");
         }
+
+        // Тесты метода Credit
+
+        [TestMethod]
+        public void Credit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
+        {
+
+            double beginningBalance = 11.99;
+            double creditAmount = -100.00;
+            BankAccount account = new BankAccount("Mr. Roman Abramovich", beginningBalance);
+
+            try
+            {
+                account.Credit(creditAmount);
+            }
+            catch (System.ArgumentOutOfRangeException e)
+            {
+                StringAssert.Contains(e.Message, BankAccount.CreditAmountLessThanZeroMessage);
+                return;
+            }
+
+            Assert.Fail("The expected exception was not thrown.");
+        }
     }
 }
